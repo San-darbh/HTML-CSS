@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ice Cream Delight</title>
+
+<style>
+/* ====== GLOBAL ====== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(120deg,#ff9a9e,#fad0c4,#fbc2eb);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* ====== NAVBAR ====== */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ff4d6d;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff4d6d;
+}
+
+/* ====== HERO SECTION ====== */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px;
+    
+}
+
+.hero-text{
+    max-width:500px;
+    animation: slideIn 1.5s ease;
+    
+}
+
+.hero-text h1{
+    font-size:55px;
+    color:#ff4d6d;
+}
+
+.hero-text p{
+    margin:20px 0;
+    color:#444;
+    font-size:18px;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff4d6d,#ff758c);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ====== ICE CREAM IMAGE ====== */
+.hero img{
+    width:350px;
+    animation: float 3s ease-in-out infinite;
+     box-shadow:0 10px 25px rgba(0,0,0,0.2);
+     border-radius: 25px;
+}
+
+/* ====== FLAVORS ====== */
+.section-title{
+    text-align:center;
+    margin-top:40px;
+    font-size:40px;
+    color:#ff4d6d;
+}
+
+.flavors{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:220px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-15px) scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0;
+}
+.test {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+}
+
+@keyframes slideIn{
+    from{opacity:0; transform:translateX(-50px);}
+    to{opacity:1; transform:translateX(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🍦 IceDelight</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Flavors</a></li>
+        <li><a href="#">Order</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Sweet & Cold</h1>
+        <p>Enjoy the most delicious ice creams with amazing flavors and creamy texture.</p>
+        <button><a class="test" href="/choose2.html" target="_blank">Order Now</a></button>
+    </div>
+
+    <img src="/imags/blackforest.jpg" alt="Ice Cream">
+</section>
+
+<h2 class="section-title">Popular Flavors</h2>
+
+<div class="flavors">
+    <div class="card">
+        <img src="/imags/strawberry.jpg">
+        <h3>Strawberry</h3>
+    </div>
+
+    <div class="card">
+        <img src="/imags/choclate.jpg">
+        <h3>Chocolate</h3>
+    </div>
+
+    <div class="card">
+        <img src="/imags/vanilla.jpg">
+        <h3>Vanilla</h3>
+    </div>
+</div>
+
+</body>
+</html>
